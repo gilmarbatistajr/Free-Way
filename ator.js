@@ -1,16 +1,18 @@
 //código do ator
-let xAtor = 85;
-let yAtor = 366;
-let colisao = false;
-let meusPontos = 0;
+let x_ator = 85;
+let y_ator = 366;
+let conllision = false;
+let my_points = 0;
 
-function mostraAtor(){
+// take actor's starting positiion 
+function getActorStartingPosition(){
   image(imagemDoAtor, xAtor, yAtor, 30, 30);
 }
 
-function movimentaAtor(){
+// move actor to point. 
+function moveActor(numberSteps){
   if (keyIsDown(UP_ARROW)){
-    yAtor -= 3;
+    yAtor -= numberSteps;
   }
   if (keyIsDown(DOWN_ARROW)){
     if(podeSeMover()){
